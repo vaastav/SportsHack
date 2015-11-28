@@ -3,7 +3,8 @@ import numpy as np
 import csv
 
 def calc_aggression(row):
-  return (1.12 * row['average_attempted_passes'] * row['average_pass_completion'] + row['average_yards_per_completed_pass'] + row['average_yards_per_rush']/row['average_yards_per_play'])/50
+  currentScore = (1.12 * row['average_attempted_passes'] * row['average_pass_completion'] + row['average_yards_per_completed_pass'] + row['average_yards_per_rush']/row['average_yards_per_play'])
+  return (currentScore/10 - 3)
 
 def main():
   team_data = pd.read_csv('cleaned_team_stats.csv')
