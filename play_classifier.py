@@ -1,4 +1,4 @@
-from sklearn import svm, ensemble
+from sklearn import ensemble
 import csv
 from random import random
 
@@ -18,15 +18,7 @@ for row in reader:
   X.append(nrow)
   Y.append(int(row[-1]))
 
-# 1 v 1 (create n*(n-1)/2 models)
-#clf = svm.SVC(decision_function_shape='ovo')
-
-# 1 v r (create n models)
-#lin_clf = svm.LinearSVC()
-#lin_clf.fit(X,Y)
-
-
-clf = ensemble.RandomForestClassifier(n_estimators=30, n_jobs=-1)
+clf = ensemble.RandomForestClassifier(n_estimators=100, n_jobs=-1)
 clf.fit(X,Y)
 
 print("prediction ready")
