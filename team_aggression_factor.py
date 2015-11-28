@@ -3,7 +3,7 @@ import numpy as np
 import csv
 
 def calc_aggression(row):
-  return 0
+  return (row['average_yards_per_attempted_pass'] * row['average_pass_completion'])/row['average_yards_per_play']
 
 def main():
   team_data = pd.read_csv('cleaned_team_stats.csv')
