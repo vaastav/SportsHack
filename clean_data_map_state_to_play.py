@@ -23,7 +23,7 @@ for i, row in enumerate(greader):
 
 o = open('cleaned_map_state_to_play_v2.csv', 'w')
 
-allowed_types = [1,2,4,7,5,3,17]
+allowed_types = [1,2,4,7,5]
 
 for i, row in enumerate(reader):
   if not i:
