@@ -6,6 +6,10 @@ def parse_yardline(yardline):
     i += 1
   return (yardline[:i], int(yardline[i:]))
 
+def parse_time(time):
+  h,m,s = [int(i) for i in time.split(":")]
+  return h*3600 + m*60 + s
+
 f = open('cleaned_play_tbl.csv', 'rt')
 reader = csv.reader(f)
 
@@ -26,9 +30,12 @@ for i, row in enumerate(reader):
   #o.write("quarter,time,down,a_score,d_score,score_diff,yardline,yardline_dist,play_type_id)
 
   quarter, time, down = row[2:5]
+  time = parse_time(time)
   yardline, yardline_num = parse_yardline(row[10])
   attacking_team = yardline.lower()
+
   home = (int(row[4]) == 0) != (attacking_team == g_hash[row[0]])
+  home = int(home) # 1 means True, 0 means False
 
   if home:
     a_score = int(row[8])
