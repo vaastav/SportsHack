@@ -21,7 +21,9 @@ for i, row in enumerate(greader):
   if i:
     g_hash[row[0]] = row[1]
 
-o = open('cleaned_map_state_to_play.csv', 'w')
+o = open('cleaned_map_state_to_play_v2.csv', 'w')
+
+allowed_types = [1,2,4,7,5,3,17]
 
 for i, row in enumerate(reader):
   if not i:
@@ -45,6 +47,11 @@ for i, row in enumerate(reader):
     d_score = int(row[8])
 
   dist_left = row[5]
-  play_type_id = row[14]
+
+  play_type_id = int(row[14])
+  if play_type_id not in allowed_types:
+    continue
+  elif play_type_id == 2:
+    play_type_id = 1
 
   o.write("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n" % (quarter, time, down, home, a_score, d_score, a_score - d_score, yardline_num, dist_left, play_type_id))
