@@ -11,8 +11,7 @@ def main():
     writer.writeheader()
     
     for row in rush_data.iterrows():
-      writer.writerow({'game_id':row[0],'play_id':row[1][0],'player1_id':row[1][15],'tackle1_id':row[1][18]})
-      
+      writer.writerow({'game_id':row[1][0],'play_id':row[1][1],'player1_id':row[1][15],'tackle1_id':row[1][18]})
 
 if __name__ == '__main__':
   main()
