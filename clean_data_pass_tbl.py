@@ -4,6 +4,7 @@ f = open('cfl_play_by_play.csv', 'rt')
 reader = csv.reader(f)
 
 o = open('cleaned_pass_tbl.csv', 'w')
+o.write('game_id,play_id,player1_id,player2_id,tackle1_id')
 
 for row in reader:
   # if play_type_id is 1 (pass) store game_id, play_id, passer, receiver, tackler
