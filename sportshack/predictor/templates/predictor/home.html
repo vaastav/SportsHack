@@ -78,10 +78,6 @@
    <script>
    		var count = 0;
    		var vote = -1;
-   		var puntClicked = false;
-   		var passClicked = false;
-   		var rushClicked = false;
-   		var kickClicked = false;
    		var times = [];
    		var probs = [];
    		var states = [];
@@ -113,7 +109,9 @@
    		{% endfor %}
 
      	window.onload = function() {
-     		setInterval(voteUpdate, 15000);
+     		while(count < 8) { 
+     			setInterval(voteUpdate, 15000);
+     		}
      	}
 
      	function voteUpdate() {
@@ -130,8 +128,9 @@
      		if(userVote != -1) {
      			if(userVote == actualPlay){
      				//increment player points
-     				alert("You were correct!");
+     				Materialize.toast('You were correct!', 4000);
      			} 
+     			Materialize.toast('Sorry, try again next time!', 4000);
      		}
      		document.getElementById("playList").appendChild(node);
      		userVote = -1;
@@ -141,6 +140,12 @@
                 $("#pass").text( "PASS (Estimated probability: " + Math.round( 100*probs[new_ind[count]][0] ) + "%");
                 $("#rush").text( "RUSH (Estimated probability: " + Math.round( 100*probs[new_ind[count]][1] ) + "%");
                 $("#kickoff").text( "KICKOFF (Estimated probability: " + 100*probs[new_ind[count]][2] + "%)");
+                
+                document.getElementById("punt").style.background = "0x26a69a";
+                document.getElementById("pass").style.background = "0x26a69a";
+                document.getElementById("rush").style.background = "0x26a69a";
+                document.getElementById("kickoff").style.background = "0x26a69a";
+
      	}
 
      	function getVote(value) {
