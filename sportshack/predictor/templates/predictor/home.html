@@ -68,7 +68,7 @@
 	
 	
 
-   <div class="col s12">
+   <div class="col s12" style="position:fixed;bottom:0;width:100%">
    	<div class = "card-panel blue">
    		Vote
    	</div>
@@ -136,10 +136,11 @@
      		document.getElementById("playList").appendChild(node);
      		userVote = -1;
      		count++;
-     		document.getElementById("punt").innerHtml = "Punt " +probs[new_ind[count]][3];
-     		document.getElementById("pass").innerHtml = "Pass " +probs[new_ind[count]][0];
-     		document.getElementById("rush").innerHtml = "Rush " + probs[new_ind[count]][1];
-     		document.getElementById("kickoff").innerHtml = "Kickoff " + probs[new_ind[count]][2];
+
+                $("#punt").text( "PUNT (Estimated probability: " + Math.round( 100*probs[new_ind[count]][3] ) + "%");
+                $("#pass").text( "PASS (Estimated probability: " + Math.round( 100*probs[new_ind[count]][0] ) + "%");
+                $("#rush").text( "RUSH (Estimated probability: " + Math.round( 100*probs[new_ind[count]][1] ) + "%");
+                $("#kickoff").text( "KICKOFF (Estimated probability: " + 100*probs[new_ind[count]][2] + "%)");
      	}
 
      	function getVote(value) {
