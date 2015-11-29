@@ -12,6 +12,6 @@ def signup(request):
 def select(request):
 	#games = Game.objects.all()
 	return render(request, 'predictor/game_select.html')
-def profile(request):
-	return render(request, 'predictor/profile.html')
+def leaderboard(request):
+	return render(request, 'predictor/leaderboard.html')
 
