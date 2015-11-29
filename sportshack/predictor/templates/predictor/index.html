@@ -1,12 +1,11 @@
 {% extends "predictor/layout.html" %}
+
+{% block content %}
+{% load staticfiles %}
   <!DOCTYPE html>
   <html>
     <head>
-      <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="styles/materialize.min.css"  media="screen,projection"/>
-      <link type="text/css" rel="stylesheet" href="styles/styles.css"/>
+      <link type="text/css" rel="stylesheet" href="{% static 'predictor/css/style.css' %}"/>
 	
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -14,8 +13,8 @@
 
     <body>
     <div id = "loginButt">
-        <p><a id = "buttons" href="src/login.html" class="waves-effect waves-light btn-large">Login</a></p>
-         <a id = "buttons" href="src/signup.html" class="waves-effect waves-light btn-large">Signup</a>
+        <p><a id = "buttons" href="login" class="waves-effect waves-light btn-large">Login</a></p>
+         <a id = "buttons" href="signup" class="waves-effect waves-light btn-large">Signup</a>
 
     </div>
     
@@ -24,3 +23,5 @@
       <script type="text/javascript" src="js/materialize.min.js"></script>
     </body>
   </html>
+
+{% endblock %}
