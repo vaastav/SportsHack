@@ -94,7 +94,6 @@
 
    <div class="col s12" style="position:fixed;bottom:0;width:100%">
    	<div class = "card-panel blue">
-   		Vote
    	</div>
    </div>
    </div>
@@ -133,9 +132,7 @@
    		{% endfor %}
 
      	window.onload = function() {
-     		while(count < 8) { 
-     			setInterval(voteUpdate, 15000);
-     		}
+     		setInterval(voteUpdate, 15000);
      	}
 
      	function voteUpdate() {
@@ -151,10 +148,11 @@
      		node.appendChild(textnode);
      		if(userVote != -1) {
      			if(userVote == actualPlay){
-     				//increment player points
-     				Materialize.toast('You were correct!', 4000);
+     				alert("You are correct!")	//increment player points
      			} 
-     			Materialize.toast('Sorry, try again next time!', 4000);
+                        else {
+     				alert("You are incorrect!")	//increment player points
+                        }
      		}
      		document.getElementById("playList").appendChild(node);
      		userVote = -1;
@@ -181,7 +179,7 @@
      		else if(value == 4){
      			play = "rush";
      		}
-     		else if(value == 4){
+     		else if(value == 5){
      			play = "kickoff";
      		}
      		else {
