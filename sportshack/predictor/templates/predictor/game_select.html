@@ -17,11 +17,13 @@
 		  </thead>
 		  
 		  <tbody>
+                    {% for game in games %}
 		    <tr onclick="document.location = '#';">
-		      <td>BC Lions</td>
-		      <td>Golden State Warriors</td>
+		      <td>{{ game.home_team }}</td>
+		      <td>{{ game.away_team }}</td>w
 		      <td> <span id="currentDay"></span></td>
 		    </tr>
+                    {% endfor %}
 		  </tbody>
 		</table>
     </div>
