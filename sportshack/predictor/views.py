@@ -2,13 +2,16 @@ from django.shortcuts import render
 from predictor.models import User
 from predictor.models import Game
 
+import predictor.play_classifier as pc
 import datetime
 
 # Create your views here.
 def index(request):
   return render(request, 'predictor/index.html')
 def home(request):
-  return render(request, 'predictor/home.html')
+  #call train method from here  
+  game = request.GET.get('game')
+  return render(request, 'predictor/home.html', {'abc': game})
 def login(request):
   return render(request, 'predictor/login.html')
 def signup(request):
