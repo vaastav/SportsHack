@@ -24,8 +24,6 @@ class Team(models.Model):
   name = models.CharField(max_length = MAX_LENGTH)
   win = models.IntegerField()
   loss = models.IntegerField()
-  win_ot = models.IntegerField()
-  loss_ot = models.IntegerField()
   points = models.IntegerField()
   points_scored = models.IntegerField()
   points_conceded = models.IntegerField() 
