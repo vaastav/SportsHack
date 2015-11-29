@@ -29,7 +29,7 @@ for i, row in enumerate(reader):
   if not i:
     continue
 
-  #o.write("quarter,time,down,a_score,d_score,score_diff,yardline,yardline_dist,play_type_id)
+  #o.write("game_id,quarter,time,down,a_score,d_score,score_diff,yardline,yardline_dist,play_type_id)
 
   quarter, time, down = row[2:5]
   time = parse_time(time)
@@ -54,4 +54,4 @@ for i, row in enumerate(reader):
   elif play_type_id == 2:
     play_type_id = 1
 
-  o.write("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n" % (quarter, time, down, home, a_score, d_score, a_score - d_score, yardline_num, dist_left, play_type_id))
+  o.write("%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n" % (row[0], quarter, time, down, home, a_score, d_score, a_score - d_score, yardline_num, dist_left, play_type_id))

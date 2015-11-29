@@ -14,7 +14,7 @@ def train():
     return True
   
   for row in reader:
-    nrow = [ int(i) for i in row[:-1] ]
+    nrow = [ int(i) for i in row[1:-1] ]
     X.append(nrow)
     Y.append(int(row[-1]))
 

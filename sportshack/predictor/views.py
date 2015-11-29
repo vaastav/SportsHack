@@ -12,6 +12,9 @@ def home(request):
   #call train method from here  
   game = request.GET.get('game')
   time = request.GET.get('time')
+
+  
+
   return render(request, 'predictor/home.html', {'game': game, 'time': time})
 def login(request):
   return render(request, 'predictor/login.html')
