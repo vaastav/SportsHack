@@ -110,16 +110,19 @@
    		{% endfor %}
 
      	window.onload = function() {
-     		setInterval(voteUpdate, 15000);
+     		setInterval(voteUpdate, times[new_ind[count]]);
      	}
 
      	function voteUpdate() {
+
+                var dict = {1: "Pass", 4: "Rush", 5: "Kickoff", 7: "Punt"}
      		var time = times[new_ind[count]];
 
      		var userVote = vote;
      		var node = document.createElement("LI");
      		var actualPlay = results[new_ind[count]]; 
-     		var textnode = document.createTextNode(actualPlay);
+                var actualPlayStr = dict[actualPlay]
+     		var textnode = document.createTextNode(actualPlayStr);
      		node.appendChild(textnode);
      		if(userVote != -1) {
      			if(userVote == actualPlay){
@@ -130,6 +133,10 @@
      		document.getElementById("playList").appendChild(node);
      		userVote = -1;
      		count++;
+     		document.getElementById("punt").innerHtml += " " +probs[new_ind[count]][3];
+     		document.getElementById("pass").innerHtml += " " +probs[new_ind[count]][0];
+     		document.getElementById("rush").innerHtml += " " + probs[new_ind[count]][1];
+     		document.getElementById("kickoff").innerHtml += " " + probs[new_ind[count]][2];
      	}
 
      	function getVote(value) {
