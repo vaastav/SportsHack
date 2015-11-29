@@ -1,14 +1,12 @@
 {% extends 'predictor/layout.html' %}
 {% block content %}
 
-<div id = "loginContainer" style="width: 50%; position:absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;">
-    <div class="col m6">
-            <h3 class="center-align">Select Your Game</h3>
+<div class="container">
+	<div class="card-panel cyan lighten-5">
+	    <h3 style="text-align: center; font-size: 48px;"> <b>Current Games</b> </h3>
+	</div> 
 
-            <br><br><br>
-
-            <div class="row">
-
+	<div class="card-panel cyan lighten-5">
 		<table class="centered highlight responsive">
 		  <thead>
 		    <tr>
@@ -19,17 +17,15 @@
 		  </thead>
 		  
 		  <tbody>
-		    <tr href="#">
+		    <tr onclick="document.location = '#';">
 		      <td>BC Lions</td>
 		      <td>Golden State Warriors</td>
 		      <td> <span id="currentDay"></span></td>
 		    </tr>
 		  </tbody>
 		</table>
-            </div>
-        </div>
-
-        </div>
+    </div>
+</div>
 
         <script>
         	document.getElementById("currentDay").innerHTML = Date();
