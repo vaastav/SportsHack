@@ -15,7 +15,10 @@ def read_team_file(csvfile):
 def read_player_file(csvfile):
   reader = csv.DictReader(csvfile)
   for row in reader:
-    Player.objects.create(first_name = row['name'],last_name=row['last'],touchdown=int(row['touchdowns']),points=int(row['points']),fumbles=int(row['fumbles']),height=float(row['height']),weight=int(row['weight']),birthplace=row['birthplace'],position=row['position'],team=row['team'])
+    try:
+      Player.objects.create(first_name = row['first'],last_name=row['last'],touchdown=int(row['touchdowns']),points=int(row['points']),fumbles=int(row['fumbles']),height=float(row['height']),weight=int(row['weight']),birthplace=row['birthplace'],position=row['position'],team=row['team'])
+    except:
+      continue
    
 def import_data(request):
   read_game_file(open('predictor/data/game_data.csv','r'))
