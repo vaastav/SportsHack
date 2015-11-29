@@ -106,7 +106,7 @@ main {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 14px;
-    font-family: Montserrat;
+    font-family: "Roboto";
     outline: none;
     cursor: pointer;
 }
@@ -116,8 +116,7 @@ main {
 }
 
 input, input[placeholder]{
-font-weight:bold;
-    color:red;
     text-align:center;
+    font-family: "Roboto";
 
 }
