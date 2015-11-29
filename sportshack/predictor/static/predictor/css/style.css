@@ -5,6 +5,9 @@ body {
     background-position: center; 
     background-color: lightblue;
 	background-size: cover;
+	display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 #loginButt {
@@ -18,4 +21,10 @@ body {
 #buttons {
 	width: 130px;
 	height: 58px;
+}
+
+
+
+main {
+	flex: 1 0 auto;
 }

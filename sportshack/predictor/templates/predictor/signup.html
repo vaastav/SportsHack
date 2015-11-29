@@ -1,19 +1,6 @@
 {% extends "predictor/layout.html" %}
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="../styles/materialize.min.css"  media="screen,projection"/>
-	
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>	  
-	  
-    </head>
+{% block content %}
 
-    <body>
 <div id = "loginContainer" style="width: 50%; position:absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;">
     <div class="col m6">
             <h3 class="center-align">Signup</h3>
@@ -51,7 +38,6 @@
     
     <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="../js/materialize.min.js"></script>
 	  
 	  <script>
 	  	function signUserUp(){
@@ -91,7 +77,7 @@
 				var expires = "expires="+d.toUTCString();
 				document.cookie= "storedUser=" + email +"; " + expires;
 				document.cookie= "storedPassword="+ pass1 +"; " + expires;
-				window.location.href = 'home.html';		
+				window.location.href = '../home';		
 
 			  }
 			});
@@ -102,7 +88,5 @@
 		//save login info
 	  }
 	  </script>
+{% endblock %}
 	  
-
-    </body>
-  </html>

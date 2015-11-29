@@ -9,4 +9,6 @@ def login(request):
 	return render(request, 'predictor/login.html')
 def signup(request):
 	return render(request, 'predictor/signup.html')
+def select(request):
+	return render(request, 'predictor/game_select.html')
 
