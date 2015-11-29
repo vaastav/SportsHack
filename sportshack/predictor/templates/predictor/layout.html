@@ -11,7 +11,7 @@
     {% block stylesheets %}
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static 'predictor/css/footer.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'predictor/css/style.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'predictor/css/materialize.min.css' %}" />
     <script type="text/javascript" href="{% static 'predictor/js/materialize.min.js' %}"></script>
     <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
@@ -25,7 +25,7 @@
 
 <body>
 <!--NavBar-->
-    <nav class="light-blue lighten-1" role="navigation">
+<!--    <nav class="light-blue lighten-1" role="navigation">
         <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Predict the Game</a>
           <ul class="right hide-on-med-and-down">
             <li><a href="#">Navbar Link</a></li>
@@ -37,11 +37,13 @@
           <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
     </nav>
+-->
 <!--NavBar-->
     <main>
         {% block content %} {% endblock %}
     </main>
     
+<!--
     <footer class="page-footer orange">
         <div class="container">
           <div class="row">
@@ -52,6 +54,7 @@
             </div>
         </div>
     </footer>
+-->
   
 </body>
 

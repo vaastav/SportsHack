@@ -1,26 +1,7 @@
 body {
-    background-image: url("../images/splash-01.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
-    background-color: lightblue;
-	background-size: cover;
-	display: flex;
+    display: flex;
     min-height: 100vh;
     flex-direction: column;
-}
-
-#loginButt {
-	position:absolute;
-	top: 50%;
-	left: 20%;
-	font-weight:bolder;
-	font-size:20px;	
-}
-
-#buttons {
-	width: 130px;
-	height: 58px;
 }
 
 main {
