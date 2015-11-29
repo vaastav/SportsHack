@@ -82,6 +82,7 @@
    		var times = [];
    		var probs = [];
    		var states = [];
+   		var results = [];
 
    		{% for time in times %}
    			times.push({{time}});
@@ -92,7 +93,7 @@
    			new_ind.push(i);
    		}
 
-   		new_ind.sort(function(a,b) { return times[i] > times[j]});
+   		new_ind.sort(function(a,b) { return times[a] > times[b]});
 
    		console.log(new_ind);
 
@@ -104,19 +105,23 @@
    			states.push({{state}});
    		{% endfor %}
 
+   		{% for result in res %}
+   			results.push({{result}});
+   		{% endfor %}
+
      	window.onload = function() {
      		setInterval(voteUpdate, 15000);
      	}
 
      	function voteUpdate() {
-     		/*var userVote = vote;
+     		int time = times[new_ind[count]];
+
+     		var userVote = vote;
      		var node = document.creatElement("LI");
-     		var actualPlay; //get actual play
+     		var actualPlay = results[new_ind[count]]; 
      		var textnode = document.createTextNode(actualPlay);
      		node.appendChild(textnode);
      		if(userVote != -1) {
-     			//get play
-     			//if userVote == actualPlay
      			if(userVote == actualPlay){
      				//increment player points
      				alert("You were correct!");
@@ -124,7 +129,7 @@
      		}
      		document.getElementById("playList").appendChild(node);
      		userVote = -1;
-     		//iterate time*/
+     		count++;
      	}
 
      	function getVote(value) {
