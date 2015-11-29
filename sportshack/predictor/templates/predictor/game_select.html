@@ -18,7 +18,7 @@
 		  
 		  <tbody>
                     {% for game in games %}
-		    <tr onclick="document.location='../home/?game={{ game.game_id }}&time=0';">
+		    <tr onclick="document.location='../home/?game_id={{ game.game_id }}&game={{ game.id }}&time=0';">
 		      <td>{{ game.home_team }}</td>
 		      <td>{{ game.away_team }}</td>
 		      <td>{{ game.date }}</td>
