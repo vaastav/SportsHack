@@ -38,7 +38,6 @@
     
     <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="../js/materialize.min.js"></script>
 	  
 	  <script>
 	  	function signUserUp(){
@@ -78,7 +77,7 @@
 				var expires = "expires="+d.toUTCString();
 				document.cookie= "storedUser=" + email +"; " + expires;
 				document.cookie= "storedPassword="+ pass1 +"; " + expires;
-				window.location.href = 'home.html';		
+				window.location.href = '../home';		
 
 			  }
 			});
