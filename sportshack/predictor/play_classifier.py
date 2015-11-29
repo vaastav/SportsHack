@@ -26,7 +26,6 @@ def train():
   trained = True
 
 def predict_probabilities(in_arr):
-  print(in_arr)
   return clf.predict_proba([in_arr])
 
 train()

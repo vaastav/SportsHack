@@ -17,10 +17,6 @@ def get_plays(game_id):
       times.append( int(row[1]) * 15 + 900 - int(row[2]) )
       states.append( row[1:-1] )
       results.append( row[-1] )
-  print(times)
-  print(states)
-  print(results)
-  print(game_id)
   return (times, states, results)
     
 
