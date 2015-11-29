@@ -24,23 +24,26 @@ class Team(models.Model):
   name = models.CharField(max_length = MAX_LENGTH)
   win = models.IntegerField()
   loss = models.IntegerField()
-  win_ot = models.IntegerField()
-  loss_ot = models.IntegerField()
   points = models.IntegerField()
   points_scored = models.IntegerField()
   points_conceded = models.IntegerField() 
 
+class User(models.Model):
+  user = models.OneToOneField(User, null=True)
+  points = models.IntegerField()
+  num_votes = models.IntegerField()
+  
 class Player(models.Model):
   first_name = models.CharField(max_length = MAX_LENGTH)
   last_name = models.CharField(max_length = MAX_LENGTH)
-  team = models.ForeignKey(Team)
+  team = models.CharField(max_length = MAX_LENGTH)
   touchdown = models.IntegerField()
   points = models.IntegerField()
   fumbles = models.IntegerField()
   height = models.DecimalField(max_digits = MAX_DIGITS, decimal_places = DECIMAL_PLACES)
   weight = models.IntegerField()
   birthplace = models.CharField(max_length = MAX_LENGTH)
-  birthdate = models.DateTimeField()
+  position = models.CharField(max_length = MAX_LENGTH)
 
 class Play(models.Model):
   type_id = models.CharField(max_length = MAX_LENGTH)

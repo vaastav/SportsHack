@@ -1,0 +1,399 @@
+name,win,loss,points,points_scored,points_conceded
+BC Lions,True,False,0,29,26
+BC Lions,True,False,0,29,27
+BC Lions,False,True,0,29,37
+BC Lions,False,True,0,22,27
+BC Lions,True,False,0,36,14
+BC Lions,False,True,0,32,44
+BC Lions,True,False,0,24,16
+BC Lions,True,False,0,53,17
+BC Lions,False,True,0,17,3
+BC Lions,True,False,0,31,21
+BC Lions,True,False,0,24,22
+BC Lions,False,True,0,12,38
+BC Lions,True,False,0,27,20
+BC Lions,False,True,0,17,31
+BC Lions,False,True,0,26,40
+BC Lions,True,False,0,26,22
+BC Lions,False,True,0,38,39
+BC Lions,False,True,0,14,35
+BC Lions,True,False,0,43,29
+BC Lions,False,True,0,26,7
+BC Lions,False,True,0,25,29
+BC Lions,True,False,0,14,11
+BC Lions,False,True,0,20,27
+BC Lions,True,False,0,9,24
+BC Lions,True,False,0,26,13
+BC Lions,False,True,0,41,5
+BC Lions,True,False,0,6,23
+BC Lions,True,False,0,25,24
+BC Lions,True,False,0,36,29
+BC Lions,True,False,0,33,17
+BC Lions,False,True,0,16,20
+BC Lions,True,False,0,7,5
+BC Lions,False,True,0,26,9
+BC Lions,False,True,0,23,40
+BC Lions,True,False,0,7,14
+BC Lions,False,True,0,17,19
+BC Lions,True,False,0,41,3
+BC Lions,True,False,0,28,23
+BC Lions,False,True,0,3,37
+BC Lions,False,True,0,16,33
+BC Lions,False,True,0,17,50
+BC Lions,False,True,0,16,27
+BC Lions,True,False,0,35,32
+BC Lions,True,False,0,27,24
+BC Lions,False,True,0,27,30
+Calgary Stampeders,False,True,0,27,29
+Calgary Stampeders,True,False,0,37,34
+Calgary Stampeders,True,False,0,22,12
+Calgary Stampeders,True,False,0,24,23
+Calgary Stampeders,True,False,0,26,22
+Calgary Stampeders,True,False,0,44,32
+Calgary Stampeders,False,True,0,21,36
+Calgary Stampeders,False,True,0,27,33
+Calgary Stampeders,True,False,0,22,14
+Calgary Stampeders,True,False,0,35,11
+Calgary Stampeders,True,False,0,38,27
+Calgary Stampeders,True,False,0,37,24
+Calgary Stampeders,True,False,0,42,27
+Calgary Stampeders,True,False,0,38,11
+Calgary Stampeders,True,False,0,40,26
+Calgary Stampeders,False,True,0,22,26
+Calgary Stampeders,True,False,0,35,14
+Calgary Stampeders,True,False,0,27,13
+Calgary Stampeders,True,False,0,29,25
+Calgary Stampeders,True,False,0,7,26
+Calgary Stampeders,True,False,0,23,20
+Calgary Stampeders,False,True,0,29,8
+Calgary Stampeders,True,False,0,34,15
+Calgary Stampeders,False,True,0,10,7
+Calgary Stampeders,True,False,0,26,22
+Calgary Stampeders,False,True,0,24,25
+Calgary Stampeders,True,False,0,38,17
+Calgary Stampeders,True,False,0,30,20
+Calgary Stampeders,False,True,0,32,7
+Calgary Stampeders,True,False,0,28,13
+Calgary Stampeders,True,False,0,41,34
+Calgary Stampeders,True,False,0,40,33
+Calgary Stampeders,False,True,0,15,31
+Calgary Stampeders,False,True,0,14,7
+Calgary Stampeders,True,False,0,31,24
+Calgary Stampeders,True,False,0,33,23
+Calgary Stampeders,True,False,0,40,27
+Calgary Stampeders,False,True,0,13,18
+Calgary Stampeders,True,False,0,33,16
+Calgary Stampeders,True,False,0,43,18
+Calgary Stampeders,True,False,0,20,16
+Calgary Stampeders,True,False,0,24,23
+Calgary Stampeders,False,True,0,11,29
+Calgary Stampeders,True,False,0,25,20
+Calgary Stampeders,True,False,0,26,25
+Calgary Stampeders,False,True,0,26,29
+Edmonton Eskimos,False,True,0,24,31
+Edmonton Eskimos,False,True,0,34,37
+Edmonton Eskimos,False,True,0,12,22
+Edmonton Eskimos,True,False,0,27,22
+Edmonton Eskimos,False,True,0,25,7
+Edmonton Eskimos,True,False,0,35,27
+Edmonton Eskimos,False,True,0,18,39
+Edmonton Eskimos,True,False,0,30,20
+Edmonton Eskimos,True,False,0,3,17
+Edmonton Eskimos,False,True,0,21,31
+Edmonton Eskimos,False,True,0,27,32
+Edmonton Eskimos,False,True,0,22,34
+Edmonton Eskimos,False,True,0,29,30
+Edmonton Eskimos,False,True,0,24,47
+Edmonton Eskimos,True,False,0,9,14
+Edmonton Eskimos,False,True,0,33,36
+Edmonton Eskimos,False,True,0,27,30
+Edmonton Eskimos,False,True,0,13,27
+Edmonton Eskimos,False,True,0,29,43
+Edmonton Eskimos,True,False,0,30,26
+Edmonton Eskimos,False,True,0,11,14
+Edmonton Eskimos,True,False,0,27,20
+Edmonton Eskimos,True,False,0,28,24
+Edmonton Eskimos,True,False,0,27,11
+Edmonton Eskimos,False,True,0,26,3
+Edmonton Eskimos,False,True,0,22,26
+Edmonton Eskimos,True,False,0,33,23
+Edmonton Eskimos,False,True,0,10,8
+Edmonton Eskimos,True,False,0,41,27
+Edmonton Eskimos,False,True,0,13,28
+Edmonton Eskimos,False,True,0,34,41
+Edmonton Eskimos,True,False,0,33,16
+Edmonton Eskimos,False,True,0,23,25
+Edmonton Eskimos,True,False,0,24,0
+Edmonton Eskimos,False,True,0,32,33
+Edmonton Eskimos,False,True,0,41,9
+Edmonton Eskimos,True,False,0,24,19
+Edmonton Eskimos,True,False,0,37,3
+Edmonton Eskimos,False,True,0,17,24
+Edmonton Eskimos,False,True,0,18,43
+Edmonton Eskimos,True,False,0,18,10
+Edmonton Eskimos,True,False,0,31,24
+Edmonton Eskimos,False,True,0,11,26
+Edmonton Eskimos,True,False,0,46,17
+Edmonton Eskimos,True,False,0,23,12
+Edmonton Eskimos,True,False,0,32,3
+Saskatchewan Roughriders,True,False,0,31,24
+Saskatchewan Roughriders,True,False,0,48,25
+Saskatchewan Roughriders,False,True,0,13,25
+Saskatchewan Roughriders,False,True,0,23,24
+Saskatchewan Roughriders,False,True,0,29,31
+Saskatchewan Roughriders,True,False,0,39,18
+Saskatchewan Roughriders,True,False,0,36,21
+Saskatchewan Roughriders,True,False,0,39,28
+Saskatchewan Roughriders,False,True,0,12,17
+Saskatchewan Roughriders,False,True,0,22,24
+Saskatchewan Roughriders,True,False,0,37,0
+Saskatchewan Roughriders,True,False,0,32,20
+Saskatchewan Roughriders,True,False,0,31,17
+Saskatchewan Roughriders,False,True,0,27,42
+Saskatchewan Roughriders,True,False,0,24,21
+Saskatchewan Roughriders,False,True,0,14,9
+Saskatchewan Roughriders,True,False,0,30,27
+Saskatchewan Roughriders,True,False,0,35,14
+Saskatchewan Roughriders,False,True,0,25,29
+Saskatchewan Roughriders,False,True,0,26,30
+Saskatchewan Roughriders,True,False,0,29,25
+Saskatchewan Roughriders,True,False,0,45,23
+Saskatchewan Roughriders,True,False,0,21,17
+Saskatchewan Roughriders,True,False,0,31,10
+Saskatchewan Roughriders,False,True,0,15,48
+Saskatchewan Roughriders,False,True,0,13,26
+Saskatchewan Roughriders,False,True,0,37,9
+Saskatchewan Roughriders,True,False,0,38,14
+Saskatchewan Roughriders,True,False,0,23,17
+Saskatchewan Roughriders,True,False,0,16,11
+Saskatchewan Roughriders,True,False,0,20,16
+Saskatchewan Roughriders,True,False,0,35,30
+Saskatchewan Roughriders,True,False,0,30,24
+Saskatchewan Roughriders,True,False,0,3,28
+Saskatchewan Roughriders,True,False,0,35,32
+Saskatchewan Roughriders,False,True,0,0,24
+Saskatchewan Roughriders,False,True,0,24,31
+Saskatchewan Roughriders,True,False,0,9,40
+Saskatchewan Roughriders,False,True,0,19,24
+Saskatchewan Roughriders,False,True,0,27,40
+Saskatchewan Roughriders,True,False,0,24,17
+Saskatchewan Roughriders,False,True,0,10,18
+Saskatchewan Roughriders,False,True,0,24,31
+Saskatchewan Roughriders,False,True,0,26,30
+Saskatchewan Roughriders,False,True,0,40,42
+Saskatchewan Roughriders,False,True,0,32,35
+Saskatchewan Roughriders,False,True,0,24,27
+Saskatchewan Roughriders,False,True,0,21,31
+Winnipeg Blue Bombers,True,False,0,6,24
+Winnipeg Blue Bombers,False,True,0,25,48
+Winnipeg Blue Bombers,False,True,0,0,52
+Winnipeg Blue Bombers,True,False,0,25,13
+Winnipeg Blue Bombers,True,False,0,7,25
+Winnipeg Blue Bombers,False,True,0,33,38
+Winnipeg Blue Bombers,False,True,0,27,35
+Winnipeg Blue Bombers,True,False,0,19,11
+Winnipeg Blue Bombers,False,True,0,17,53
+Winnipeg Blue Bombers,False,True,0,20,25
+Winnipeg Blue Bombers,False,True,0,19,35
+Winnipeg Blue Bombers,False,True,0,24,37
+Winnipeg Blue Bombers,False,True,0,20,27
+Winnipeg Blue Bombers,False,True,0,18,37
+Winnipeg Blue Bombers,False,True,0,11,38
+Winnipeg Blue Bombers,True,False,0,34,27
+Winnipeg Blue Bombers,False,True,0,14,37
+Winnipeg Blue Bombers,False,True,0,20,26
+Winnipeg Blue Bombers,False,True,0,21,36
+Winnipeg Blue Bombers,True,False,0,7,37
+Winnipeg Blue Bombers,False,True,0,22,24
+Winnipeg Blue Bombers,False,True,0,20,23
+Winnipeg Blue Bombers,True,False,0,45,21
+Winnipeg Blue Bombers,True,False,0,36,28
+Winnipeg Blue Bombers,True,False,0,34,33
+Winnipeg Blue Bombers,True,False,0,3,26
+Winnipeg Blue Bombers,False,True,0,23,6
+Winnipeg Blue Bombers,True,False,0,27,26
+Winnipeg Blue Bombers,False,True,0,17,23
+Winnipeg Blue Bombers,False,True,0,21,38
+Winnipeg Blue Bombers,True,False,0,24,16
+Winnipeg Blue Bombers,False,True,0,30,35
+Winnipeg Blue Bombers,False,True,0,24,30
+Winnipeg Blue Bombers,True,False,0,9,26
+Winnipeg Blue Bombers,False,True,0,11,16
+Winnipeg Blue Bombers,False,True,0,20,42
+Winnipeg Blue Bombers,True,False,0,9,41
+Winnipeg Blue Bombers,False,True,0,23,33
+Winnipeg Blue Bombers,False,True,0,23,28
+Winnipeg Blue Bombers,True,False,0,18,13
+Winnipeg Blue Bombers,True,False,0,34,27
+Winnipeg Blue Bombers,True,False,0,30,26
+Winnipeg Blue Bombers,False,True,0,26,52
+Winnipeg Blue Bombers,True,False,0,25,23
+Winnipeg Blue Bombers,False,True,0,25,26
+Winnipeg Blue Bombers,False,True,0,3,32
+Hamilton Tiger-Cats,True,False,0,33,26
+Hamilton Tiger-Cats,False,True,0,26,29
+Hamilton Tiger-Cats,True,False,0,37,29
+Hamilton Tiger-Cats,True,False,0,52,0
+Hamilton Tiger-Cats,False,True,0,22,26
+Hamilton Tiger-Cats,False,True,0,34,39
+Hamilton Tiger-Cats,False,True,0,20,30
+Hamilton Tiger-Cats,True,False,0,28,26
+Hamilton Tiger-Cats,True,False,0,25,20
+Hamilton Tiger-Cats,False,True,0,11,35
+Hamilton Tiger-Cats,False,True,0,0,37
+Hamilton Tiger-Cats,False,True,0,20,32
+Hamilton Tiger-Cats,True,False,0,30,29
+Hamilton Tiger-Cats,True,False,0,33,19
+Hamilton Tiger-Cats,True,False,0,37,18
+Hamilton Tiger-Cats,True,False,0,24,18
+Hamilton Tiger-Cats,True,False,0,37,14
+Hamilton Tiger-Cats,True,False,0,5,36
+Hamilton Tiger-Cats,True,False,0,27,24
+Hamilton Tiger-Cats,False,True,0,37,7
+Hamilton Tiger-Cats,True,False,0,36,24
+Hamilton Tiger-Cats,False,True,0,23,45
+Hamilton Tiger-Cats,True,False,0,28,23
+Hamilton Tiger-Cats,False,True,0,23,41
+Hamilton Tiger-Cats,False,True,0,10,31
+Hamilton Tiger-Cats,False,True,0,24,28
+Hamilton Tiger-Cats,True,False,0,7,10
+Hamilton Tiger-Cats,True,False,0,33,23
+Hamilton Tiger-Cats,False,True,0,26,27
+Hamilton Tiger-Cats,False,True,0,29,36
+Hamilton Tiger-Cats,False,True,0,20,30
+Hamilton Tiger-Cats,True,False,0,13,12
+Hamilton Tiger-Cats,False,True,0,31,38
+Hamilton Tiger-Cats,False,True,0,28,3
+Hamilton Tiger-Cats,True,False,0,25,23
+Hamilton Tiger-Cats,True,False,0,16,11
+Hamilton Tiger-Cats,True,False,0,19,17
+Hamilton Tiger-Cats,False,True,0,33,34
+Hamilton Tiger-Cats,False,True,0,16,6
+Hamilton Tiger-Cats,False,True,0,24,26
+Hamilton Tiger-Cats,True,False,0,34,25
+Hamilton Tiger-Cats,True,False,0,29,15
+Hamilton Tiger-Cats,False,True,0,16,20
+Hamilton Tiger-Cats,True,False,0,40,24
+Hamilton Tiger-Cats,False,True,0,23,24
+Hamilton Tiger-Cats,True,False,0,52,26
+Hamilton Tiger-Cats,False,True,0,13,17
+Hamilton Tiger-Cats,True,False,0,31,21
+Toronto Argonauts,False,True,0,24,6
+Toronto Argonauts,True,False,0,9,20
+Toronto Argonauts,True,False,0,24,20
+Toronto Argonauts,True,False,0,37,30
+Toronto Argonauts,True,False,0,31,29
+Toronto Argonauts,True,False,0,39,34
+Toronto Argonauts,False,True,0,16,24
+Toronto Argonauts,False,True,0,28,39
+Toronto Argonauts,True,False,0,33,27
+Toronto Argonauts,True,False,0,35,19
+Toronto Argonauts,True,False,0,38,12
+Toronto Argonauts,True,False,0,34,22
+Toronto Argonauts,False,True,0,19,33
+Toronto Argonauts,True,False,0,38,13
+Toronto Argonauts,True,False,0,36,33
+Toronto Argonauts,False,True,0,14,35
+Toronto Argonauts,False,True,0,18,24
+Toronto Argonauts,True,False,0,26,20
+Toronto Argonauts,True,False,0,36,21
+Toronto Argonauts,False,True,0,20,23
+Toronto Argonauts,False,True,0,24,36
+Toronto Argonauts,True,False,0,24,22
+Toronto Argonauts,True,False,0,41,23
+Toronto Argonauts,False,True,0,21,45
+Toronto Argonauts,True,False,0,48,15
+Toronto Argonauts,False,True,0,15,34
+Toronto Argonauts,False,True,0,17,18
+Toronto Argonauts,True,False,0,9,37
+Toronto Argonauts,False,True,0,31,5
+Toronto Argonauts,True,False,0,38,21
+Toronto Argonauts,False,True,0,17,33
+Toronto Argonauts,False,True,0,27,41
+Toronto Argonauts,False,True,0,12,13
+Toronto Argonauts,False,True,0,33,40
+Toronto Argonauts,True,False,0,40,23
+Toronto Argonauts,True,False,0,33,32
+Toronto Argonauts,True,False,0,34,33
+Toronto Argonauts,False,True,0,12,20
+Toronto Argonauts,True,False,0,26,24
+Toronto Argonauts,False,True,0,14,17
+Toronto Argonauts,False,True,0,23,5
+Toronto Argonauts,False,True,0,27,34
+Toronto Argonauts,True,False,0,30,10
+Toronto Argonauts,True,False,0,26,11
+Toronto Argonauts,True,False,0,42,40
+Toronto Argonauts,False,True,0,20,25
+Toronto Argonauts,True,False,0,30,27
+Montreal Alouettes,False,True,0,26,33
+Montreal Alouettes,False,True,0,20,9
+Montreal Alouettes,False,True,0,20,24
+Montreal Alouettes,False,True,0,30,37
+Montreal Alouettes,True,False,0,38,33
+Montreal Alouettes,False,True,0,14,36
+Montreal Alouettes,False,True,0,11,19
+Montreal Alouettes,False,True,0,26,28
+Montreal Alouettes,False,True,0,14,22
+Montreal Alouettes,True,False,0,17,12
+Montreal Alouettes,False,True,0,27,38
+Montreal Alouettes,True,False,0,32,27
+Montreal Alouettes,False,True,0,13,38
+Montreal Alouettes,True,False,0,47,24
+Montreal Alouettes,False,True,0,21,24
+Montreal Alouettes,False,True,0,27,34
+Montreal Alouettes,True,False,0,39,38
+Montreal Alouettes,False,True,0,36,5
+Montreal Alouettes,False,True,0,24,27
+Montreal Alouettes,True,False,0,23,20
+Montreal Alouettes,False,True,0,23,28
+Montreal Alouettes,False,True,0,10,26
+Montreal Alouettes,True,False,0,8,29
+Montreal Alouettes,False,True,0,24,9
+Montreal Alouettes,False,True,0,33,34
+Montreal Alouettes,True,False,0,5,41
+Montreal Alouettes,True,False,0,5,31
+Montreal Alouettes,False,True,0,23,33
+Montreal Alouettes,False,True,0,11,16
+Montreal Alouettes,False,True,0,16,24
+Montreal Alouettes,True,False,0,20,10
+Montreal Alouettes,True,False,0,38,31
+Montreal Alouettes,False,True,0,16,33
+Montreal Alouettes,True,False,0,31,15
+Montreal Alouettes,False,True,0,15,7
+Montreal Alouettes,False,True,0,40,9
+Montreal Alouettes,True,False,0,20,12
+Montreal Alouettes,True,False,0,23,17
+Montreal Alouettes,True,False,0,17,14
+Montreal Alouettes,False,True,0,15,29
+Montreal Alouettes,True,False,0,50,17
+Montreal Alouettes,False,True,0,24,40
+Montreal Alouettes,False,True,0,10,30
+Montreal Alouettes,False,True,0,16,20
+Montreal Alouettes,True,False,0,29,11
+Montreal Alouettes,False,True,0,23,25
+Montreal Alouettes,True,False,0,17,13
+Ottawa REDBLACKS,False,True,0,17,21
+Ottawa REDBLACKS,True,False,0,26,10
+Ottawa REDBLACKS,False,True,0,28,36
+Ottawa REDBLACKS,False,True,0,11,27
+Ottawa REDBLACKS,True,False,0,18,17
+Ottawa REDBLACKS,False,True,0,23,33
+Ottawa REDBLACKS,False,True,0,14,38
+Ottawa REDBLACKS,False,True,0,17,38
+Ottawa REDBLACKS,True,False,0,8,10
+Ottawa REDBLACKS,True,False,0,7,32
+Ottawa REDBLACKS,False,True,0,10,20
+Ottawa REDBLACKS,False,True,0,5,7
+Ottawa REDBLACKS,False,True,0,32,35
+Ottawa REDBLACKS,True,False,0,7,15
+Ottawa REDBLACKS,True,False,0,42,20
+Ottawa REDBLACKS,False,True,0,3,41
+Ottawa REDBLACKS,True,False,0,6,16
+Ottawa REDBLACKS,False,True,0,17,23
+Ottawa REDBLACKS,False,True,0,25,34
+Ottawa REDBLACKS,True,False,0,5,23
+Ottawa REDBLACKS,True,False,0,20,16
+Ottawa REDBLACKS,True,False,0,27,16
+Ottawa REDBLACKS,False,True,0,17,46
+Ottawa REDBLACKS,False,True,0,12,23
+Ottawa REDBLACKS,True,False,0,29,26
