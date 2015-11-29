@@ -1,0 +1,35 @@
+import pandas as pd
+import numpy as np
+import csv
+
+def calc_defensive_aggression(row):
+  return 0
+
+def main():
+  defense_aggression_data = pd.read_csv('cleaned_team_defense_stats.csv')
+  opposition_data = pd.read_csv('cleaned_team_opposition_averages.csv')
+  with open('team_defense_aggression_factor.csv','w') as outf:
+    fieldnames = ['team_name','average_interception_returns_attempts','average_interception_returns_yards','average_defense_tackles','average_defense_sacks','average_defense_sack_yards','average_defense_passes_defensed','average_defense_forced_fumbles','average_defense_fumble_recoveries','average_special_teams_tackles','average_points_conceded','defensive_aggression']
+    writer=csv.DictWriter(outf,delimiter=',',lineterminator='\n',fieldnames=fieldnames)
+    writer.writeheader()
+
+    for team in np.unique(defense_aggression_data.team_name):
+      team_specific_data = defense_aggression_data[defense_aggression_data.team_name == team]
+      opp_team_data = opposition_data[opposition_data.Team == team]
+      row = {}
+      row['team_name'] = team
+      row['average_interception_returns_attempts'] = np.average(team_specific_data.interception_returns_attempts)
+      row['average_interception_returns_yards'] = np.average(team_specific_data.interception_returns_yards)
+      row['average_defense_tackles'] = np.average(team_specific_data.defense_tackles)
+      row['average_defense_sacks'] = np.average(team_specific_data.defense_sacks)
+      row['average_defense_sack_yards'] = np.average(team_specific_data.defense_sack_yards)
+      row['average_defense_passes_defensed'] = np.average(team_specific_data.defense_passes_defensed)
+      row['average_defense_forced_fumbles'] = np.average(team_specific_data.defense_forced_fumbles)
+      row['average_defense_fumble_recoveries'] = np.average(team_specific_data.defense_fumble_recoveries)
+      row['average_special_teams_tackles'] = np.average(team_specific_data.special_teams_tackles)
+      row['defensive_aggression'] = calc_defensive_aggression(row)
+      row['average_points_conceded'] = np.sum(opp_team_data.Average_Points_Conceded)
+      writer.writerow(row)
+
+if __name__ == '__main__':
+  main()
