@@ -93,7 +93,7 @@
    			new_ind.push(i);
    		}
 
-   		new_ind.sort(function(a,b) { return times[a] > times[b]});
+   		new_ind.sort(function(a,b) { return times[a] - times[b]});
 
    		console.log(new_ind);
 
@@ -118,10 +118,14 @@
 
      	function voteUpdate() {
 
+                var dict = {1: "Pass", 4: "Rush", 5: "Kickoff", 7: "Punt"}
+     		var time = times[new_ind[count]];
+
      		var userVote = vote;
      		var node = document.createElement("LI");
      		var actualPlay = results[new_ind[count]]; 
-     		var textnode = document.createTextNode(actualPlay);
+                var actualPlayStr = dict[actualPlay]
+     		var textnode = document.createTextNode(actualPlayStr);
      		node.appendChild(textnode);
      		if(userVote != -1) {
      			if(userVote == actualPlay){
