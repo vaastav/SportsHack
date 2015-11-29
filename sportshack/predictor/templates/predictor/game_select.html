@@ -20,8 +20,8 @@
                     {% for game in games %}
 		    <tr onclick="document.location = '#';">
 		      <td>{{ game.home_team }}</td>
-		      <td>{{ game.away_team }}</td>w
-		      <td> <span id="currentDay"></span></td>
+		      <td>{{ game.away_team }}</td>
+		      <td>{{ game.date }}</td>
 		    </tr>
                     {% endfor %}
 		  </tbody>
