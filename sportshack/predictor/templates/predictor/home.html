@@ -110,10 +110,7 @@
    		{% endfor %}
 
      	window.onload = function() {
-     		while(count < new_ind.length){
-     			setTimeout(voteUpdate, times[new_ind[count]]);
-     		}
-     		
+     		setInterval(voteUpdate, times[new_ind[count]]);
      	}
 
      	function voteUpdate() {
