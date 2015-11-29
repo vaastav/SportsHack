@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from sportshack import parse_csv
 
 urlpatterns = [
 	url(r'^predictor/', include('predictor.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^/import_data/$',parse_csv.import_data,name='import_data')
+    url(r'^import_data/$',parse_csv.import_data,name='import_data')
 ]
