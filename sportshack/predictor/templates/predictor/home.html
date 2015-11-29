@@ -21,10 +21,10 @@
 			<div class = "card blue light-2">
 				<div class="card-content white-text">
 					<span class="card-title">Vote</span><br>
-					<button class="waves-effect waves-light btn vote-button" id="punt" type="button" onclick="getVote()" name="vote">Punt</button><br><br>
-					<button class="waves-effect waves-light btn vote-button" id="rush" type="button" onclick="getVote()" name="vote">Rush</button><br><br>
-					<button class="waves-effect waves-light btn vote-button" id="pass" type="button" onclick="getVote()" name="vote">Pass</button><br><br>
-					<button class="waves-effect waves-light btn vote-button" id="kickoff" type="button" onclick="getVote()" name="vote">KickOff</button>
+					<button class="waves-effect waves-light btn vote-button" id="punt" type="button" value="7" onclick="getVote(value)" name="vote">Punt</button><br><br>
+					<button class="waves-effect waves-light btn vote-button" id="rush" type="button" value="4" onclick="getVote(value)" name="vote">Rush</button><br><br>
+					<button class="waves-effect waves-light btn vote-button" id="pass" type="button" value="1" onclick="getVote(value)" name="vote">Pass</button><br><br>
+					<button class="waves-effect waves-light btn vote-button" id="kickoff" type="button" value="5" onclick="getVote(value)" name="vote">KickOff</button>
 				</div>
 			</div>
 		</div>
@@ -51,9 +51,7 @@
 		  
 		<div class = "col s6">
 			<div class = "card-panel teal light-2">
-				<ol>Past Plays</ol>
-				<li>Play 2</li>
-				<li>Play 3</li>
+				<ol id="playList">Past Plays</ol>
 			</div>
 		</div>
 		
@@ -77,7 +75,62 @@
    </div>
    </div>
 
+   <script>
+   		var count = 0;
+   		var vote = -1;
 
+   		var times = [];
+   		var probs = [];
+   		var states = [];
+
+   		{% for time in times %}
+   			times.push({{time}});
+   		{% endfor %}
+
+   		new_ind = [];
+   		for(var i = 0; i < times.length; i++) {
+   			new_ind.push(i);
+   		}
+
+   		new_ind.sort(function(a,b) { return times[i] > times[j]});
+
+   		console.log(new_ind);
+
+   		{% for prob in probs %}
+   			probs.push({{prob}});
+   		{% endfor %}
+
+   		{% for state in states %}
+   			states.push({{state}});
+   		{% endfor %}
+
+     	window.onload = function() {
+     		setInterval(voteUpdate, 15000);
+     	}
+
+     	function voteUpdate() {
+     		/*var userVote = vote;
+     		var node = document.creatElement("LI");
+     		var actualPlay; //get actual play
+     		var textnode = document.createTextNode(actualPlay);
+     		node.appendChild(textnode);
+     		if(userVote != -1) {
+     			//get play
+     			//if userVote == actualPlay
+     			if(userVote == actualPlay){
+     				//increment player points
+     				alert("You were correct!");
+     			} 
+     		}
+     		document.getElementById("playList").appendChild(node);
+     		userVote = -1;
+     		//iterate time*/
+     	}
+
+     	function getVote(value) {
+     		vote = value;
+      	}
+   </script>
     <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
