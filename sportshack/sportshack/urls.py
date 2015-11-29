@@ -21,5 +21,6 @@ urlpatterns = [
 	url(r'^predictor/', include('predictor.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^import_data/$',parse_csv.import_data,name='import_data'),
-    url(r'^delete_data/$',parse_csv.flush_data,name='delete_data')
+    url(r'^delete_data/$',parse_csv.flush_data,name='delete_data'),
+    url(r'^create_users/$',parse_csv.create_users,name='create_users')
 ]

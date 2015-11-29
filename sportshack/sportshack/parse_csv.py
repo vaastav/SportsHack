@@ -1,4 +1,4 @@
-from predictor.models import Game,Team,Player
+from predictor.models import Game,Team,Player,User
 from django.http import HttpResponse
 import csv
 
@@ -19,6 +19,13 @@ def read_player_file(csvfile):
       Player.objects.create(first_name = row['first'],last_name=row['last'],touchdown=int(row['touchdowns']),points=int(row['points']),fumbles=int(row['fumbles']),height=float(row['height']),weight=int(row['weight']),birthplace=row['birthplace'],position=row['position'],team=row['team'])
     except:
       continue
+
+def create_users(request):
+  User.objects.create( points=40, num_votes=60, email="mehrishikib@gmail.com" )
+  User.objects.create( points=80, num_votes=90, email="johnadams@gmail.com" )
+  User.objects.create( points=10, num_votes=20, email="rob@gmail.com" )
+  return HttpResponse('Success!')
+  
 
 def flush_data(request):
   Game.objects.all().delete()

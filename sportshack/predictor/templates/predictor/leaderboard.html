@@ -14,7 +14,7 @@
     <table class="highlight centered responsive-table">
       <thead>
         <tr>
-          <th data-field="uname">Username</th>
+          <th data-field="uname">Email</th>
           <th data-field="score">Score</th>
           <th data-field="numvotes">Number of Votes</th>
         </tr>
@@ -23,7 +23,7 @@
       <tbody>
         {% for user in users %}
         <tr>
-          <td>{{ user.user }}</td>
+          <td>{{ user.email }}</td>
           <td>{{ user.points }}</td>
           <td>{{ user.num_votes }}</td>
         </tr>

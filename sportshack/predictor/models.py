@@ -34,6 +34,7 @@ class User(models.Model):
   user = models.OneToOneField(User, null=True)
   points = models.IntegerField()
   num_votes = models.IntegerField()
+  email = models.CharField(max_length = MAX_LENGTH)
   
 class Player(models.Model):
   first_name = models.CharField(max_length = MAX_LENGTH)
