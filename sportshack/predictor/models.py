@@ -44,17 +44,13 @@ class Player(models.Model):
   height = models.DecimalField(max_digits = MAX_DIGITS, decimal_places = DECIMAL_PLACES)
   weight = models.IntegerField()
   birthplace = models.CharField(max_length = MAX_LENGTH)
-  birthdate = models.DateField(_("DATE"),default=datetime.date.today)
+  birthdate = models.DateTimeField()
 
 class Play(models.Model):
   type_id = models.CharField(max_length = MAX_LENGTH)
   success = models.IntegerField()
-  player1 = models.ForeignKey(Player)
-  player2 = models.ForeignKey(Player)
-  player3 = models.ForeignKey(Player)
-  tackler = models.ForeignKey(Player)
 
-class Predictions(model.Model):
+class Predictions(models.Model):
   play = models.ForeignKey(Play)
 #  user = models.ForeignKey(User)
   award_points = models.IntegerField()
