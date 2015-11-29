@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from predictor.models import User
+from predictor.models import Game
 
 # Create your views here.
 def index(request):
@@ -11,8 +12,9 @@ def login(request):
 def signup(request):
   return render(request, 'predictor/signup.html')
 def select(request):
-  #games = Game.objects.all()
-  return render(request, 'predictor/game_select.html')
+  games = Game.objects.all()
+  context = {'games': games}
+  return render(request, 'predictor/game_select.html', games)
 def leaderboard(request):
   context = { 'users': User.objects.all().order_by('points') }
   return render(request, 'predictor/leaderboard.html', context) 
