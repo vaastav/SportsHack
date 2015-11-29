@@ -93,7 +93,7 @@
    			new_ind.push(i);
    		}
 
-   		new_ind.sort(function(a,b) { return times[a] > times[b]});
+   		new_ind.sort(function(a,b) { return times[a] - times[b]});
 
    		console.log(new_ind);
 
@@ -114,10 +114,10 @@
      	}
 
      	function voteUpdate() {
-     		int time = times[new_ind[count]];
+     		var time = times[new_ind[count]];
 
      		var userVote = vote;
-     		var node = document.creatElement("LI");
+     		var node = document.createElement("LI");
      		var actualPlay = results[new_ind[count]]; 
      		var textnode = document.createTextNode(actualPlay);
      		node.appendChild(textnode);
