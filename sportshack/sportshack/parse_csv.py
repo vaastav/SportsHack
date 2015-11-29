@@ -1,4 +1,4 @@
-from predictor.models import Game,Team
+from predictor.models import Game,Team,Player
 import csv
 
 def read_game_file(csvfile):
@@ -11,4 +11,9 @@ def read_team_file(csvfile):
   reader = csv.DictReader(csvfile)
   for row in reader:
     Team.objects.create( name = row['name'],win = row['wins'],loss=row['loss'],points=row['points'],points_scored=row['points_scored'],points_conceded=row['points_conceded'])
+
+def read_player_file(csvfile):
+  reader = csv.DictReader(csvfile)
+  for row in reader:
+    Player.objects.create(first_name = row['name'],last_name=row['last'],touchdown=int(row['touchdowns']),points=int(row['points']),fumbles=int(row['fumbles']),height=float(row['height']),weight=int(row['weight']),birthplace=row['birthplace'],position=row['position'],team=row['team']);
     
