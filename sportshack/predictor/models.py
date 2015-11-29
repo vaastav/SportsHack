@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 MAX_LENGTH = 255
 DECIMAL_PLACES = 7
-MAX_DIGITS = DECIMAL_PLACES + 4
+MAX_DIGITS = DECIMAL_PLACES + 3
 
 class Game(models.Model):
   home_team = models.CharField(max_length = MAX_LENGTH)
@@ -41,7 +41,7 @@ class Player(models.Model):
   touchdown = models.IntegerField()
   points = models.IntegerField()
   fumbles = models.IntegerField()
-  height = models.DecimalField(max_digits = MAX_DIGITS, decimal_places = DECIMAL_PLACES)
+  height = models.DecimalField(max_digits=MAX_DIGITS, decimal_places=DECIMAL_PLACES)
   weight = models.IntegerField()
   birthplace = models.CharField(max_length = MAX_LENGTH)
   position = models.CharField(max_length = MAX_LENGTH)
