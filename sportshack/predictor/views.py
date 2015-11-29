@@ -15,7 +15,7 @@ def get_plays(game_id):
   for row in reader:
     if row[0] == game_id:
       times.append( int(row[1]) * 15 + 900 - int(row[2]) )
-      states.append( row[1:-1] )
+      states.append( [int(i) for i in row[1:-1]] )
       results.append( row[-1] )
   return (times, states, results)
     
@@ -33,6 +33,10 @@ def home(request):
 
   times, states, res = get_plays(game_id)
   probs = [ pc.predict_probabilities( [int(i) for i in state] ) for state in states ]
+  nprobs = []
+  for i in probs:
+    nprobs.append([float(j) for j in i[0]])
+  probs = nprobs
 
   return render(request, 'predictor/home.html', {'game_id': game_id, 'game': game, 'time': time, 'times': times, 'states': states, 'res': res, 'probs': probs})
 def login(request):
