@@ -28,6 +28,11 @@ class Team(models.Model):
   points_scored = models.IntegerField()
   points_conceded = models.IntegerField() 
 
+class User(models.Model):
+  user = models.OneToOneField(User, null=True)
+  points = models.IntegerField()
+  num_votes = models.IntegerField()
+  
 class Player(models.Model):
   first_name = models.CharField(max_length = MAX_LENGTH)
   last_name = models.CharField(max_length = MAX_LENGTH)
