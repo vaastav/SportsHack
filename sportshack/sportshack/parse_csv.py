@@ -1,10 +1,11 @@
 from predictor.models import Game,Team,Player
+from django.http import HttpResponse
 import csv
 
 def read_game_file(csvfile):
   reader = csv.DictReader(csvfile)
   for row in reader:
-    Game.objects.create( home_team = row['home_team'],away_team = row['away_team'],home_score=int(row['home_score']),away_score = int(row['away_score']),home_qt1=int(row['home_qt1']),home_qt2 = int(row['home_qt2']), home_qt3 = int(row['home_qt3']), home_qt4 = int(row['home_qt4']), away_qt1 = int(row['away_qt1']), away_qt2 = int(row['away_qt2']), away_qt3 = int(row['away_qt3']),away_qt4 = int(row['away_qt4'])
+    Game.objects.create( home_team = row['home_team'],away_team = row['away_team'],home_score=int(row['home_score']),away_score = int(row['away_score']),home_qt1=int(row['home_qt1']),home_qt2 = int(row['home_qt2']), home_qt3 = int(row['home_qt3']), home_qt4 = int(row['home_qt4']), away_qt1 = int(row['away_qt1']), away_qt2 = int(row['away_qt2']), away_qt3 = int(row['away_qt3']),away_qt4 = int(row['away_qt4']),date=row['date'])
 
 def read_team_file(csvfile):
   reader = csv.DictReader(csvfile)
@@ -14,9 +15,10 @@ def read_team_file(csvfile):
 def read_player_file(csvfile):
   reader = csv.DictReader(csvfile)
   for row in reader:
-    Player.objects.create(first_name = row['name'],last_name=row['last'],touchdown=int(row['touchdowns']),points=int(row['points']),fumbles=int(row['fumbles']),height=float(row['height']),weight=int(row['weight']),birthplace=row['birthplace'],position=row['position'],team=row['team']);
+    Player.objects.create(first_name = row['name'],last_name=row['last'],touchdown=int(row['touchdowns']),points=int(row['points']),fumbles=int(row['fumbles']),height=float(row['height']),weight=int(row['weight']),birthplace=row['birthplace'],position=row['position'],team=row['team'])
    
-def import_data():
+def import_data(request):
   read_game_file(open('../predictor/data/game_data.csv','r'))
   read_team_file(open('../predictor/data/team_model_data.csv','r'))
   read_player_file(open('../predictor/data/players_clean.csv','r'))
+  return HttpResponse('Success!')

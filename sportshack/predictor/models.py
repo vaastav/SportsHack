@@ -19,6 +19,7 @@ class Game(models.Model):
   away_qt2 = models.IntegerField()
   away_qt3 = models.IntegerField()
   away_qt4 = models.IntegerField()
+  date = models.DateTimeField(default=datetime.now(),blank=True)
 
 class Team(models.Model):
   name = models.CharField(max_length = MAX_LENGTH)
