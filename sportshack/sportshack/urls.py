@@ -19,4 +19,5 @@ from django.contrib import admin
 urlpatterns = [
 	url(r'^predictor/', include('predictor.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^/import_data/$',parse_csv.import_data,name='import_data')
 ]
