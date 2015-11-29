@@ -110,7 +110,7 @@
    		{% endfor %}
 
      	window.onload = function() {
-     		setInterval(voteUpdate, times[new_ind[count]]);
+     		setInterval(voteUpdate, 15000);
      	}
 
      	function voteUpdate() {
@@ -133,10 +133,11 @@
      		document.getElementById("playList").appendChild(node);
      		userVote = -1;
      		count++;
-     		document.getElementById("punt").innerHtml += " " +probs[new_ind[count]][3];
-     		document.getElementById("pass").innerHtml += " " +probs[new_ind[count]][0];
-     		document.getElementById("rush").innerHtml += " " + probs[new_ind[count]][1];
-     		document.getElementById("kickoff").innerHtml += " " + probs[new_ind[count]][2];
+
+                $("#punt").text( "PUNT (Estimated probability: " + Math.round( 100*probs[new_ind[count]][3] ) + "%");
+                $("#pass").text( "PASS (Estimated probability: " + Math.round( 100*probs[new_ind[count]][0] ) + "%");
+                $("#rush").text( "RUSH (Estimated probability: " + Math.round( 100*probs[new_ind[count]][1] ) + "%");
+                $("#kickoff").text( "KICKOFF (Estimated probability: " + 100*probs[new_ind[count]][2] + "%)");
      	}
 
      	function getVote(value) {
