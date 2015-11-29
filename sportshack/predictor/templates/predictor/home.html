@@ -163,10 +163,14 @@
                 $("#rush").text( "RUSH (Estimated probability: " + Math.round( 100*probs[new_ind[count]][1] ) + "%");
                 $("#kickoff").text( "KICKOFF (Estimated probability: " + 100*probs[new_ind[count]][2] + "%)");
                 
-                document.getElementById("punt").style.background = "0x26a69a";
-                document.getElementById("pass").style.background = "0x26a69a";
-                document.getElementById("rush").style.background = "0x26a69a";
-                document.getElementById("kickoff").style.background = "0x26a69a";
+                var button = document.getElementById("punt");
+                button.style.background = "rgb(38, 166, 154)";
+                button = document.getElementById("rush");
+                button.style.background = "rgb(38, 166, 154)";
+                button = document.getElementById("kickoff");
+                button.style.background = "rgb(38, 166, 154)";
+                button = document.getElementById("pass");
+                button.style.background = "rgb(38, 166, 154)";
 
      	}
 
