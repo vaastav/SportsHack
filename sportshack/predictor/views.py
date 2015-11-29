@@ -13,8 +13,6 @@ def home(request):
   game = request.GET.get('game')
   time = request.GET.get('time')
 
-  
-
   return render(request, 'predictor/home.html', {'game': game, 'time': time})
 def login(request):
   return render(request, 'predictor/login.html')

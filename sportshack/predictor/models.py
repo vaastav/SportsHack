@@ -7,6 +7,7 @@ DECIMAL_PLACES = 7
 MAX_DIGITS = DECIMAL_PLACES + 3
 
 class Game(models.Model):
+  game_id = models.IntegerField()
   home_team = models.CharField(max_length = MAX_LENGTH)
   away_team = models.CharField(max_length = MAX_LENGTH)
   home_score = models.IntegerField()
