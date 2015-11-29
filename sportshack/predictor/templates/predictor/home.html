@@ -78,7 +78,10 @@
    <script>
    		var count = 0;
    		var vote = -1;
-
+   		var puntClicked = false;
+   		var passClicked = false;
+   		var rushClicked = false;
+   		var kickClicked = false;
    		var times = [];
    		var probs = [];
    		var states = [];
@@ -110,7 +113,7 @@
    		{% endfor %}
 
      	window.onload = function() {
-     		setInterval(voteUpdate, times[new_ind[count]]);
+     		setInterval(voteUpdate, 15000);
      	}
 
      	function voteUpdate() {
@@ -133,14 +136,29 @@
      		document.getElementById("playList").appendChild(node);
      		userVote = -1;
      		count++;
-     		document.getElementById("punt").innerHtml += " " +probs[new_ind[count]][3];
-     		document.getElementById("pass").innerHtml += " " +probs[new_ind[count]][0];
-     		document.getElementById("rush").innerHtml += " " + probs[new_ind[count]][1];
-     		document.getElementById("kickoff").innerHtml += " " + probs[new_ind[count]][2];
+     		document.getElementById("punt").innerHtml = "Punt " +probs[new_ind[count]][3];
+     		document.getElementById("pass").innerHtml = "Pass " +probs[new_ind[count]][0];
+     		document.getElementById("rush").innerHtml = "Rush " + probs[new_ind[count]][1];
+     		document.getElementById("kickoff").innerHtml = "Kickoff " + probs[new_ind[count]][2];
      	}
 
      	function getVote(value) {
      		vote = value;
+     		var play;
+     		if(value == 1){
+     			play = "pass";
+     		}
+     		else if(value == 4){
+     			play = "rush";
+     		}
+     		else if(value == 4){
+     			play = "kickoff";
+     		}
+     		else {
+     			play = "punt";
+     		}
+     		var button = document.getElementById(play);
+     		button.style.background = "rgb(238, 110, 115)";
       	}
    </script>
     <!--Import jQuery before materialize.js-->
