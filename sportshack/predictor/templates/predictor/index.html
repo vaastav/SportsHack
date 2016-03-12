@@ -1,0 +1,37 @@
+{% extends "predictor/layout.html" %}
+
+{% block content %}
+{% load staticfiles %}
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <link type="text/css" rel="stylesheet" href="{% static 'predictor/css/bg.css' %}"/>
+	
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+
+<!--
+    <div id = "loginButt">
+        <p><a id = "buttons" href="login" class="waves-effect waves-light btn-large">Login</a></p>
+         <a id = "buttons" href="signup" class="waves-effect waves-light btn-large">Signup</a>
+
+    </div>
+    
+-->
+
+    <div id="loginButt">
+      <a href="login"> <input type="image" name="submit" src="{% static 'predictor/images/login.png' %}" /> </a>
+      <br>
+      <a href="signup"> <input type="image" name="submit" src="{% static 'predictor/images/signup.png' %}" /> </a>
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+  </html>
+
+{% endblock %}

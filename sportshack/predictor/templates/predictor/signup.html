@@ -1,0 +1,97 @@
+{% extends "predictor/layout.html" %}
+{% block content %}
+
+<div id="loginContainer" class="logo">
+    <div class="login-block">
+            <h3 class="center-align">Signup</h3>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" placeholder = "Email" class="validate">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id='pass1' type="password" placeholder = "Password" class="validate">
+                        </div>
+						<div class="input-field col s12">
+                            <input id='pass2' type="password" placeholder = "Confirm Password" class="validate">
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="row">
+                        <div class="col m12">
+						<p id="invalidInput" class = "center-align"></p>
+
+                            <p class="center-align">
+                                <button type="button" onclick="signUserUp()">Signup</button>
+
+                            </p>
+                        </div>
+                        <div class="col m12">
+                            <p class="center-align">
+                                <button type="button" onclick="location.href='../';" name="action">Back</button>
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        </div>
+    
+    <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	  
+	  <script>
+	  	function signUserUp(){
+	  	
+		//check if input is valid
+		var pass1 = document.getElementById('pass1').value;
+		var pass2 = document.getElementById('pass2').value;
+		var email = document.getElementById('email').value;
+		
+		if (pass1 != pass2){
+			document.getElementById('invalidInput').innerHTML = "Your passwords do not match. Try again";
+			document.getElementById('pass1').value = "";
+			document.getElementById('pass2').value = "";
+		}
+		
+		else if (pass1 == pass2){
+			var ref = new Firebase("https://sportshack.firebaseio.com/");
+			ref.createUser({
+			  email: email,
+			  password: pass1
+			}, function(error, userData) {
+			  if (error) {
+				switch (error.code) {
+				  case "EMAIL_TAKEN":
+					document.getElementById('invalidInput').innerHTML = "Email already taken";
+					break;
+				  case "INVALID_EMAIL":
+					document.getElementById('invalidInput').innerHTML = "Invalid email!";
+					break;
+				  default:
+					document.getElementById('invalidInput').innerHTML = "Error creating user. Try again";
+				}
+			  } else {
+			document.getElementById('invalidInput').innerHTML = "Created user succesfully";
+				var d = new Date();
+				d.setTime(d.getTime() + (1*24*60*60*1000));
+				var expires = "expires="+d.toUTCString();
+				document.cookie= "storedUser=" + email +"; " + expires;
+				document.cookie= "storedPassword="+ pass1 +"; " + expires;
+				window.location.href = '../select';		
+
+			  }
+			});
+		}
+		
+		
+		//change to home page of site
+		//save login info
+	  }
+	  </script>
+{% endblock %}
+	  
