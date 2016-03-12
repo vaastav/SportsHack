@@ -1,0 +1,202 @@
+{% extends "predictor/layout.html" %}
+{% block content %}
+
+<div id = "entireContainer">
+
+	<div id = "upperContainer">
+	
+	<div class="row">
+		<div class="col s3">
+		  	<div class="card blue darken-3">
+				<div class="card-content white-text">
+				  <span class="card-title">Hamilton Tigercats</span>
+			  <ul>
+<li>Randy	Chevrier</li>
+<li>Dante	Marsh</li>
+<li>Marwan	Hage</li>
+<li>Jamall	Johnson</li>
+<li>Dan	Federkeil</li>
+<li>Jon	Cornish</li>
+<li>Jordan	Matechuk</li>
+<li>Jason	Pottinger</li>
+<li>J.R.	LaRose</li>
+<li>Seth	Williams</li>
+<li>Diamond	Ferri</li>
+<li>Anton	McKenzie</li>
+<li>Dwight	Anderson</li>
+<li>Anthony	Parker</li>
+<li>Corey	Mace</li>
+			  </ul>
+				</div>
+			</div>
+		</div>
+		<div class = "col s6">
+			<div class = "card blue light-2">
+				<div class="card-content white-text">
+					<span class="card-title">Vote</span><br>
+					<button class="waves-effect waves-light btn vote-button" id="punt" type="button" value="7" onclick="getVote(value)" name="vote">Punt</button><br><br>
+					<button class="waves-effect waves-light btn vote-button" id="rush" type="button" value="4" onclick="getVote(value)" name="vote">Rush</button><br><br>
+					<button class="waves-effect waves-light btn vote-button" id="pass" type="button" value="1" onclick="getVote(value)" name="vote">Pass</button><br><br>
+					<button class="waves-effect waves-light btn vote-button" id="kickoff" type="button" value="5" onclick="getVote(value)" name="vote">KickOff</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col s3">
+		  <div class="card blue darken-3">
+			<div class="card-content white-text">
+			  <span class="card-title">Calgary Stampeders</span>
+				  <ul>
+<li>Spencer	Watt</li>
+<li>Craig	Butler</li>
+<li>Brandon	Stewart</li>
+<li>Brian	Bulcke</li>
+<li>Justin 	Hickman</li>
+<li>Johnny	Sears Jr.</li>
+<li>Justin	Medlock</li>
+<li>Hugh 	O'Neill</li>
+<li>Brian	Simmons</li>
+<li>Bakari	Grant</li>
+<li>Ted	Laurent</li>
+<li>Andy	Fantuz</li>
+<li>Simoni	Lawrence</li>
+				  </ul>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class = row>
+		  <div class="col s3">
+			<div class="card-panel blue darken-4">
+			  <span class="white-text">Offensive Minded
+			  </span>
+			</div>
+		  </div>
+		  
+		<div class = "col s6">
+			<div class = "card-panel teal light-2">
+				<ol id="playList">Past Plays</ol>
+			</div>
+		</div>
+		
+		<div class="col s3">
+			<div class="card-panel blue darken-4">
+			  <span class="white-text">Defensive Minded
+			  </span>
+			</div>
+		</div>
+		  
+	  </div>
+    
+		</div>
+	
+	
+
+   <div class="col s12" style="position:fixed;bottom:0;width:100%">
+   	<div class = "card-panel blue">
+   	</div>
+   </div>
+   </div>
+
+   <script>
+   		var count = 0;
+   		var vote = -1;
+   		var times = [];
+   		var probs = [];
+   		var states = [];
+   		var results = [];
+
+   		{% for time in times %}
+   			times.push({{time}});
+   		{% endfor %}
+
+   		new_ind = [];
+   		for(var i = 0; i < times.length; i++) {
+   			new_ind.push(i);
+   		}
+
+   		new_ind.sort(function(a,b) { return times[a] - times[b]});
+
+   		console.log(new_ind);
+
+   		{% for prob in probs %}
+   			probs.push({{prob}});
+   		{% endfor %}
+
+   		{% for state in states %}
+   			states.push({{state}});
+   		{% endfor %}
+
+   		{% for result in res %}
+   			results.push({{result}});
+   		{% endfor %}
+
+     	window.onload = function() {
+     		setInterval(voteUpdate, 15000);
+     	}
+
+     	function voteUpdate() {
+
+                var dict = {1: "Pass", 4: "Rush", 5: "Kickoff", 7: "Punt"}
+     		var time = times[new_ind[count]];
+
+     		var userVote = vote;
+     		var node = document.createElement("LI");
+     		var actualPlay = results[new_ind[count]]; 
+                var actualPlayStr = dict[actualPlay]
+     		var textnode = document.createTextNode(actualPlayStr);
+     		node.appendChild(textnode);
+     		if(userVote != -1) {
+     			if(userVote == actualPlay){
+     				alert("You are correct!")	//increment player points
+     			} 
+                        else {
+     				alert("You are incorrect!")	//increment player points
+                        }
+     		}
+     		document.getElementById("playList").appendChild(node);
+     		userVote = -1;
+     		count++;
+
+                $("#punt").text( "PUNT (Estimated probability: " + Math.round( 100*probs[new_ind[count]][3] ) + "%");
+                $("#pass").text( "PASS (Estimated probability: " + Math.round( 100*probs[new_ind[count]][0] ) + "%");
+                $("#rush").text( "RUSH (Estimated probability: " + Math.round( 100*probs[new_ind[count]][1] ) + "%");
+                $("#kickoff").text( "KICKOFF (Estimated probability: " + 100*probs[new_ind[count]][2] + "%)");
+                
+                var button = document.getElementById("punt");
+                button.style.background = "rgb(38, 166, 154)";
+                button = document.getElementById("rush");
+                button.style.background = "rgb(38, 166, 154)";
+                button = document.getElementById("kickoff");
+                button.style.background = "rgb(38, 166, 154)";
+                button = document.getElementById("pass");
+                button.style.background = "rgb(38, 166, 154)";
+
+     	}
+
+     	function getVote(value) {
+     		vote = value;
+     		var play;
+     		if(value == 1){
+     			play = "pass";
+     		}
+     		else if(value == 4){
+     			play = "rush";
+     		}
+     		else if(value == 5){
+     			play = "kickoff";
+     		}
+     		else {
+     			play = "punt";
+     		}
+     		var button = document.getElementById(play);
+     		button.style.background = "rgb(238, 110, 115)";
+      	}
+   </script>
+    <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+    </body>
+  </html>
+
+{% endblock %}

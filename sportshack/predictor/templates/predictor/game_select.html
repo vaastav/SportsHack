@@ -1,0 +1,32 @@
+{% extends 'predictor/layout.html' %}
+{% block content %}
+
+<div class="container">
+	<div class="card-panel cyan lighten-5">
+	    <h3 style="text-align: center; font-size: 48px;"> <b>Current Games</b> </h3>
+	</div> 
+
+	<div class="card-panel cyan lighten-5">
+		<table class="centered highlight responsive">
+		  <thead>
+		    <tr>
+		      <th data-field="home">Home</th>
+		      <th data-field="away">Away</th>
+		      <th data-field="date">Date</th>
+		    </tr>
+		  </thead>
+		  
+		  <tbody>
+                    {% for game in games %}
+		    <tr onclick="document.location='../home/?game_id={{ game.game_id }}&game={{ game.id }}&time=0';">
+		      <td>{{ game.home_team }}</td>
+		      <td>{{ game.away_team }}</td>
+		      <td>{{ game.date }}</td>
+		    </tr>
+                    {% endfor %}
+		  </tbody>
+		</table>
+    </div>
+</div>
+
+{% endblock %}
